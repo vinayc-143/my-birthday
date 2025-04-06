@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fefcea, #f1da36);
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #timer {
+    font-size: 28px;
+    font-weight: bold;
+    color: #6a1b9a;
+    margin-top: 20px;
+  }
+  
+  .sticky-notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px auto;
+  }
+  
+  .note {
+    background: #fff9c4;
+    padding: 20px;
+    border: 2px solid #fdd835;
+    width: 200px;
+    height: auto;
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
+    transform: rotate(-2deg);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .note:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+  
+  .letter {
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    color: #4e342e;
+    text-align: left;
+    white-space: pre-wrap;
+  }
+  
+  .balloons {
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+  }
+  
+  .balloon {
+    width: 40px;
+    height: 60px;
+    border-radius: 50% 50% 50% 50%;
+    margin: 0 15px;
+    opacity: 0.7;
+    animation: float 4s infinite ease-in-out;
+  }
+  
+  .balloon.red {
+    background: #e57373;
+  }
+  
+  .balloon.blue {
+    background: #64b5f6;
+  }
+  
+  .balloon.green {
+    background: #81c784;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .note {
+      width: 140px;
+      font-size: 16px;
+    }
+  
+    .letter {
+      font-size: 16px;
+      padding: 15px;
+    }
+  
+    #timer {
+      font-size: 20px;
+    }
+  }
