@@ -1,54 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday My Love</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Surprise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito:wght@400;700&display=swap">
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="music.mp3" type="audio">
-    Your browser does not support the audio tag.
-  </audio>
+    <div class="container">
+        <div class="countdown-container">
+            <h2>Countdown to Your Special Day</h2>
+            <div id="countdown">
+                <div class="time-block">
+                    <span id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="time-block">
+                    <span id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="time-block">
+                    <span id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+        </div>
 
+        <div class="sticky-notes-container">
+            <div class="sticky-note" style="transform: rotate(-3deg); background-color: #FFDA79;">
+                <p>Remember when we first met? That smile of yours changed everything.</p>
+            </div>
+            <div class="sticky-note" style="transform: rotate(2deg); background-color: #A3D8F4;">
+                <p>You make every day brighter just by being you.</p>
+            </div>
+            <div class="sticky-note" style="transform: rotate(-2deg); background-color: #B5EAD7;">
+                <p>Your laugh is still my favorite sound in the world.</p>
+            </div>
+            <div class="sticky-note" style="transform: rotate(3deg); background-color: #C7CEEA;">
+                <p>Here's to another year of adventures together!</p>
+            </div>
+            <div class="sticky-note" style="transform: rotate(-1deg); background-color: #FFB7B2;">
+                <p>You're the best thing that's ever happened to me.</p>
+            </div>
+            <div class="sticky-note" style="transform: rotate(1deg); background-color: #E2F0CB;">
+                <p>I love the way your eyes light up when you're excited about something.</p>
+            </div>
+        </div>
 
-  <div class="container">
-    <h1>Countdown Begins</h1>
-    <h1 id="timer">
-      <span id="days"></span>d :
-      <span id="hours"></span>h :
-      <span id="minutes"></span>m :
-      <span id="seconds"></span>s
-    </h1>
-
-    <div class="sticky-notes">
-      <div class="note">You're my sunshine on cloudy days.</div>
-      <div class="note">Every moment with you is magical.</div>
-      <div class="note">I love you more every single day.</div>
-      <div class="note">You make my heart smile.</div>
-      <div class="note">Your smile is my favorite thing.</div>
-      <div class="note">Forever isn’t long enough with you.</div>
-      <div class="note">My world is better with you in it.</div>
-      <div class="note">You complete me in every way.</div>
-      <div class="note">Stay healthy  God Bless you</div>
-
-
+        <div id="celebration" class="hidden">
+            <header class="birthday-header">
+                <h1 class="title">Happy Birthday!</h1>
+            </header>
+            
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="cake-top"></div>
+                    <div class="cake-middle"></div>
+                    <div class="cake-bottom"></div>
+                    <div class="candle">
+                        <div class="flame" id="candle-flame"></div>
+                    </div>
+                </div>
+                <button id="blow-candle" class="blow-button">Blow the Candle!</button>
+            </div>
+            
+            <div class="cartoon-characters">
+                <div class="character character-1"></div>
+                <div class="character character-2"></div>
+                <div class="character character-3"></div>
+            </div>
+            
+            <div class="gifts-container">
+                <h2>Click to unwrap your gifts!</h2>
+                <div class="gifts">
+                    <div class="gift" data-message=" I LOVE YOU">
+                        <div class="gift-top"></div>
+                        <div class="gift-box"></div>
+                        <div class="gift-ribbon"></div>
+                    </div>
+                    <div class="gift" data-message="I LOVE YOU SO MUCH">
+                        <div class="gift-top"></div>
+                        <div class="gift-box"></div>
+                        <div class="gift-ribbon"></div>
+                    </div>
+                    <div class="gift" data-message="I LOVE YOU SO SO SO MUCH">
+                        <div class="gift-top"></div>
+                        <div class="gift-box"></div>
+                        <div class="gift-ribbon"></div>
+                    </div>
+                    <div class="gift" data-message="KITKAT">
+                      <div class="gift-top"></div>
+                      <div class="gift-box"></div>
+                      <div class="gift-ribbon"></div>
+                  </div>
+                  <div class="gift" data-message="ICE CREAM">
+                    <div class="gift-top"></div>
+                    <div class="gift-box"></div>
+                    <div class="gift-ribbon"></div>
+                </div>
+                <div class="gift" data-message="BAHOT SARA KHANA">
+                  <div class="gift-top"></div>
+                  <div class="gift-box"></div>
+                  <div class="gift-ribbon"></div>
+              </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="letter" id="letter">
-      <pre id="typewriter"></pre>
-    </div>
-
-    <div class="balloons">
-      <div class="balloon red"></div>
-      <div class="balloon blue"></div>
-      <div class="balloon green"></div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-  <script src="script.js"></script>
+    <div id="balloons-container"></div>
+    <div id="gift-message" class="hidden"></div>
+    <div id="confetti-container"></div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
